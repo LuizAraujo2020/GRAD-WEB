@@ -34,3 +34,4 @@ function printResult(operator, num1, num2) {
 for (const op in operators) {
     printResult(operators[op], number1, number2)
 }
+
