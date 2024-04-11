@@ -26,6 +26,7 @@ app.get('/calculadora', (req, res) => {
 })
 
 
+/// Como se fosse a 'main' 
 app.listen(PORT, function() {
     console.log('app rodando na porta: ' + PORT);
 });
