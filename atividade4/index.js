@@ -1,12 +1,11 @@
 const express = require('express');
-const app = express();
+const app  = express();
 const PORT = 8080;
-
 
 // Modules
 const path = require('path');
 const math = require('../modulos/utils/calculadora');
-const ui = require('../modulos/factories/page_factory');
+const ui   = require('../modulos/factories/page_factory');
 
 
 app.get('/', function(req, res) {
