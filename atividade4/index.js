@@ -7,12 +7,10 @@ const path = require('path');
 const math = require('../modulos/utils/calculadora');
 const ui   = require('../modulos/factories/page_factory');
 
-
 app.get('/', function(req, res) {
     // res.send(ui.createCalculatorPage(0, 0, 'somar', '0'));
   res.sendFile(path.join(__dirname, '/index.html'));
 });
-
 
 app.get('/calculadora', (req, res) => {
     // Get inputs from URL.
