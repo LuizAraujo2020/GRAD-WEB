@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const PORT = 8080;
 
+const path = require('path');
+
 const estoque = require('./estoque');
 const factory = require('../modulos/factories/estoque_factory');
 
@@ -19,6 +21,15 @@ app.get('/', (req, res) => {
 app.get('/adicionar/:nome/:qtd', (req, res) => {
     const nome = req.params.nome;
     const qtd = req.params.qtd;
+
+    let produto = estoque.criarProduto(nome, qtd);
+    estoque.adicionarProduto(produto);
+
+    res.send(factory.criarListaDeProdutos(estoque.listarProdutos()));
+});
+app.get('/adicionar', (req, res) => {
+    const nome = req.query.nome;
+    const qtd = req.query.qtd;
 
     let produto = estoque.criarProduto(nome, qtd);
     estoque.adicionarProduto(produto);

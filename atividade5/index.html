@@ -6,6 +6,19 @@
     <title>Listar Produtos</title>
 </head>
 <body>
+    <h1>Lista de Produtos</h1>
+
+    <form action="/adicionar" method="get">
+
+        <label for="nome">NOME: </label>
+        <input type="text" name="nome" id="nome">
+
+        <label for="qtd">QTD: </label>
+        <input type="text" name="qtd" id="qtd">
+        
+        <button type="submit">➕</button>
+    </form>
+
     <table>
         <tr>
             <th>ID</th>

@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(36, 36, 36);
+    color: rgb(240, 240, 240);
+}
+
+th, td {
+    min-width: 50px;
+
+    font-size: 21px;
+    font-family: sans-serif, monospace;
+
+    text-align: left;
+
+}
