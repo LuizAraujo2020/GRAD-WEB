@@ -53,6 +53,25 @@ app.get('/editar/:id/:qtd', (req, res) => {
     res.send(factory.criarListaDeProdutos(estoque.listarProdutos()));
 });
 
+app.get('/editar', (req, res) => {
+    const id = req.query.id;
+    const nome = req.query.nome;
+    const qtd = req.query.qtd;
+
+    estoque.editarProduto(id, nome, qtd);
+
+    res.send(factory.criarListaDeProdutos(estoque.listarProdutos()));
+});
+
+
+// DETAILS
+app.get('/detalhes/:id', (req, res) => {
+    const id = req.params.id;
+
+    res.send(factory.criarDetalhesDeProduto(estoque.buscarProdutoPorID(id)));
+});
+
+
 /// Como se fosse a 'main' 
 app.listen(PORT, function() {
     console.log('app rodando na porta: ' + PORT);

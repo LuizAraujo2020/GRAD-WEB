@@ -20,9 +20,23 @@ function listarProdutos() {
     return produtos;
 }
 
+function buscarProdutoPorID(id) {
+    return produtos.find((p) => {
+        return p.id == id
+    })
+}
+
 function editarProduto(id, qtd) {
     for (let index = 0; index < produtos.length; index++) {
         if (produtos[index].id == id) {
+            produtos[index].qtd = qtd;
+        }
+    }
+}
+function editarProduto(id, nome, qtd) {
+    for (let index = 0; index < produtos.length; index++) {
+        if (produtos[index].id == id) {
+            produtos[index].nome = nome;
             produtos[index].qtd = qtd;
         }
     }
@@ -38,6 +52,7 @@ module.exports = {
     criarProduto,
     adicionarProduto,
     listarProdutos,
+    buscarProdutoPorID,
     editarProduto,
     removerProduto
 }
