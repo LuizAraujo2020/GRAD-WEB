@@ -10,6 +10,7 @@ function criarListaDeProdutos(produtos) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Listar Produtos</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     </head>
     <body>
         <h1>Lista de Produtos</h1>
@@ -33,6 +34,7 @@ function criarListaDeProdutos(produtos) {
             </tr>
         ${ criarLinhas(produtos) }
         </table>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </body>
     </html>
     `;
@@ -90,6 +92,7 @@ function criarDetalhesDeProduto(produto) {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <title>Listar Produtos</title>
         
     </style>
@@ -107,8 +110,9 @@ function criarDetalhesDeProduto(produto) {
         <label for="">QTD</label>
         <input type="text" name="qtd" id="qtd" value="${produto.qtd}">
 
-        <button type="submit">SALVAR</button>
+        <button type="submit" class="btn btn-primary">SALVAR</button>
     </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </body>
     </html>
     `;
