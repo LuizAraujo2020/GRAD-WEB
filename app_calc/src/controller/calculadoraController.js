@@ -1,3 +1,5 @@
+const calculadora = require('../calculadora/calculadora')
+
 function index(req, res) {
 
     let erro_valor = req.query.erro_valor
@@ -14,7 +16,7 @@ function resultado(req, res) {
     if(isNaN(v1) || isNaN(v2)) {
         res.redirect('/?erro_valor=true')
     } else {
-        v3 = v1 + v2
+        const v3 = calculadora(v1, v2, op)
         res.render('resultado', { v1, v2, op , v3 })
     }
 }
